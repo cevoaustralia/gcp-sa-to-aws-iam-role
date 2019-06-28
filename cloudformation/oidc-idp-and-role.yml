@@ -11,7 +11,7 @@ Parameters:
     Description: The URL of the OIDC identity provider
     AllowedPattern: '^https:\/\/.*'
     ConstraintDescription: Must be a valid HTTPS URL
-    Default: https://gcp.google.com/
+    Default: https://gcp.google.com
   OIDCThumbprint:
     Type: String
     Description: A hex-encoded SHA-1 hash value of the X.509 certificate used by the domain where the OIDC provider makes its keys available
@@ -91,3 +91,11 @@ Resources:
         Variables:
           AWS_ACCOUNT_ID: !Ref "AWS::AccountId"
       CodeUri: ../lambda/
+
+Outputs:
+  DeploymentUserRoleArn:
+    Description: ARN of the IAM Role
+    Value: !GetAtt GCPDeploymentUserRole.Arn
+  OIDCProviderArn:
+    Description: ARN of the OIDC IdP
+    Value: !GetAtt ProviderCreator.Arn

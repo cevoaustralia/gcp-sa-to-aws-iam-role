@@ -3,10 +3,8 @@
 # This code must run on a VM instance with a service account associated with it.
 # The service account must be granted the 'Service Account Token Creator' IAM Role
 
-import googleapiclient.discovery
-import json
-import os
 import requests
+import boto3
 
 SERVICE_ACCOUNT = os.getenv("SERVICE_ACCOUNT", "default")
 BASE_URL = 'http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/'

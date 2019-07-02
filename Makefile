@@ -3,7 +3,7 @@
 SUFFIX := $(shell hostname | md5sum | cut -c1-10 )
 S3_BUCKET := oidc-idp-stack-$(SUFFIX)
 
-OIDC_THUMBPRINT := abcd1234567890abcd1234567890abcd12345678
+OIDC_THUMBPRINT := EEACBD0CB452819577911E1E6203DB262F84A318
 
 all: package deploy
 

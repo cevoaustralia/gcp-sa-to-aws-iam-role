@@ -40,6 +40,7 @@ Resources:
       MaxSessionDuration: 3600
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/ReadOnlyAccess
+        - arn:aws:iam::aws:policy/AmazonSQSFullAccess
 
   GCPIdentityProvider:
     Type: Custom::IDP

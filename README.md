@@ -1,6 +1,6 @@
 # GCP Service Account to AWS IAM Role
 
-This repo contains code that accompanies [the blog post](http://cevo.com.au/) on
+This repo contains code that accompanies [the blog post](https://cevo.com.au/post/2019-07-29-using-gcp-service-accounts-to-access-aws/) on
 using GCP Service Accounts to acquire AWS IAM Role credentials.
 
 ## Preparation
